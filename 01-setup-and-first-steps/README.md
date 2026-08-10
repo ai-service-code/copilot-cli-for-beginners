@@ -330,6 +330,8 @@ Proceed with implementation? [Y/n]
 > 💡 **Want something more complex?** Try: `/plan Add search and filter capabilities to the book app`. Plan mode scales from simple features to full applications.
 
 > 📚 **Autopilot mode**: You may have noticed Shift+Tab cycles through a third mode called **Autopilot**. In autopilot mode, Copilot works through an entire plan without waiting for your input after each step — like handing a task to a colleague and saying "let me know when you're finished." The typical workflow is plan → accept → autopilot, which means you need to be good at writing plans first. You can also launch directly into autopilot with `copilot --autopilot`. Get comfortable with Interactive and Plan modes first, then see the [official docs](https://docs.github.com/copilot/concepts/agents/copilot-cli/autopilot) when you're ready.
+>
+> 💡 **Plan then auto-implement**: Once you're comfortable with both Plan and Autopilot modes, you can combine them in one command: `copilot --plan --mode autopilot`. This launches Copilot in plan mode first so you can review the approach, then automatically moves into autopilot to implement the plan — all without waiting for manual approval at each step. It's a great way to stay in control of *what* gets built while still letting Copilot handle the *how*.
 
 ---
 
