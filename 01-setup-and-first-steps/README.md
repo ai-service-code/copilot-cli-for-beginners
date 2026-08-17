@@ -204,7 +204,7 @@ When you're done exploring, exit the session:
 
 You've just seen what Copilot CLI can do. Now let's understand *how* to use these capabilities effectively. The key is knowing which of the three interaction modes to use for different situations.
 
-> 💡 **Note**: Copilot CLI also has an **Autopilot** mode where it works through tasks without waiting for your input. It's powerful but requires granting full permissions and uses premium requests autonomously. This course focuses on the three modes below. We'll point you to Autopilot once you're comfortable with the basics.
+> 💡 **Note**: Copilot CLI also has an **Autopilot** mode where it works through an entire task without waiting for your input at each step — like handing work to a colleague and saying "let me know when you're done." You can now invoke it directly with `/autopilot <objective>` (no special experimental settings needed). It uses premium requests autonomously, so get comfortable with Interactive and Plan modes first, then give Autopilot a try once you're ready.
 
 ---
 
@@ -329,7 +329,13 @@ Proceed with implementation? [Y/n]
 
 > 💡 **Want something more complex?** Try: `/plan Add search and filter capabilities to the book app`. Plan mode scales from simple features to full applications.
 
-> 📚 **Autopilot mode**: You may have noticed Shift+Tab cycles through a third mode called **Autopilot**. In autopilot mode, Copilot works through an entire plan without waiting for your input after each step — like handing a task to a colleague and saying "let me know when you're finished." The typical workflow is plan → accept → autopilot, which means you need to be good at writing plans first. You can also launch directly into autopilot with `copilot --autopilot`. Get comfortable with Interactive and Plan modes first, then see the [official docs](https://docs.github.com/copilot/concepts/agents/copilot-cli/autopilot) when you're ready.
+> 📚 **Autopilot mode**: You may have noticed Shift+Tab cycles through a third mode called **Autopilot**. In autopilot mode, Copilot works through an entire plan without waiting for your input after each step — like handing a task to a colleague and saying "let me know when you're finished." You can invoke it in a few ways:
+>
+> - **Type `/autopilot <objective>`** directly in an interactive session to hand off a complete task. For example: `/autopilot Add input validation for the book year field in the book app`
+> - **Combine plan and autopilot** using `copilot --plan --mode autopilot` to generate a plan first and then auto-implement it without waiting for step-by-step approval
+> - **Launch directly** into autopilot with `copilot --autopilot` or press Shift+Tab to cycle into Autopilot mode
+>
+> Get comfortable with Interactive and Plan modes first, then see the [official docs](https://docs.github.com/copilot/concepts/agents/copilot-cli/autopilot) when you're ready to try Autopilot.
 
 ---
 
@@ -419,9 +425,10 @@ That's it for getting started! As you become comfortable, you can explore additi
 
 | Command | What It Does |
 |---------|--------------|
+| `/config model` | Set your default AI model that persists across all future sessions |
 | `/delegate` | Hand off task to GitHub Copilot cloud agent |
 | `/fleet` | Split a complex task into parallel subtasks for faster completion |
-| `/model` | Show or switch AI model |
+| `/model` | Show or switch AI model for the current session only |
 | `/tasks` | View background subagents and detached shell sessions |
 
 ### Code
@@ -512,6 +519,14 @@ copilot
 > 💡 **Not sure which model to pick?** Select **`Auto`** from the model picker to let Copilot automatically choose the best available model for each session. This is a great default if you're just getting started and don't want to think about model selection.
 
 > 💡 **Model family shortcuts**: You can also type a short family alias — like `opus`, `sonnet`, `haiku`, `gpt`, or `gemini` — directly in the `/model` picker instead of scrolling through the full list. Copilot will pick the best available model in that family for you.
+
+> 💡 **Session vs. persistent model selection**: `/model` changes your model for the **current session only** — when you start a new session, it returns to your default. To set a model that persists across all future sessions, use `/config model` instead:
+>
+> ```
+> > /config model
+> ```
+>
+> This opens a picker where you can choose your default model. Think of `/model` as "use this for now" and `/config model` as "always use this."
 
 </details>
 
