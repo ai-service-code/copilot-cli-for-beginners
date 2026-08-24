@@ -304,6 +304,9 @@ Copilot automatically scans these locations for skills:
 |----------|-------|
 | `.github/skills/` | Project-specific (shared with team via git) |
 | `~/.copilot/skills/` | User-specific (your personal skills) |
+| Any directory added with `--add-dir` | Extra directories you allow Copilot to access |
+
+> 💡 **Skills from extra directories**: When you add a directory to Copilot's allowed list using `/add-dir <directory>` (or the `--add-dir` flag when starting `copilot`), Copilot will also discover and load any skills and custom agents stored there. This is useful for sharing a skills library across multiple projects without copying files everywhere.
 
 ### Skill Structure
 
