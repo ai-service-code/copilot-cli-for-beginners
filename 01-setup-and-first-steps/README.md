@@ -411,6 +411,8 @@ That's it for getting started! As you become comfortable, you can explore additi
 | `/init` | Initialize Copilot instructions for your repository |
 | `/mcp` | Manage MCP server configuration |
 | `/settings` | Open an interactive dialog to browse and edit all user settings in one place |
+
+> 💡 **Set your default startup mode**: In `/settings`, you can configure `defaultMode` to automatically launch in your preferred mode every time you start Copilot CLI — for example, always starting in **Plan** mode instead of Interactive. This saves you from typing `/plan` at the start of every session.
 | `/skills` | Manage skills for enhanced capabilities |
 
 > 💡 Agents are covered in [Chapter 04](../04-agents-custom-instructions/README.md), skills are covered in [Chapter 05](../05-skills/README.md), and MCP servers are covered in [Chapter 06](../06-mcp-servers/README.md).
@@ -457,6 +459,8 @@ That's it for getting started! As you become comfortable, you can explore additi
 | `/memory [on\|off\|show]` | Enable, disable, or view persistent memory — facts and preferences remembered across all sessions |
 | `/new` | Ends the current session (saving it to history for search/resume) and starts a fresh conversation. |
 | `/resume` | Switch to a different session (optionally specify session ID or name) |
+
+> 💡 **Session restore**: If Copilot CLI closes unexpectedly (e.g., your terminal crashes or your machine restarts), the next time you run `copilot` it will offer to **restore your open sessions** automatically. You won't lose your work — just pick a session from the list and continue where you left off.
 | `/rename` | Rename the current session (omit the name to auto-generate one) |
 | `/rewind` | Open a timeline picker to roll back to any earlier point in the conversation |
 | `/usage` | Display session usage metrics and statistics, including quota progress bars |
@@ -471,7 +475,7 @@ That's it for getting started! As you become comfortable, you can explore additi
 |---------|--------------|
 | `/statusline` (or `/footer`) | Customize which items appear in the status bar at the bottom of the session (directory, branch, effort, context window, quota) |
 | `/theme` | View or set terminal theme |
-| `/voice` | Dictate your prompt using local speech-to-text — speak naturally instead of typing |
+| `/voice` | Dictate your prompt using local speech-to-text — speak naturally instead of typing. You can also press **Ctrl+Space** anywhere during a session to toggle voice dictation on or off. |
 
 ### Help and Feedback
 
@@ -481,6 +485,8 @@ That's it for getting started! As you become comfortable, you can explore additi
 | `/changelog` | Display changelog for CLI versions |
 | `/feedback` | Submit feedback to GitHub |
 | `/help` | Show all available commands |
+
+> 💡 **`copilot app` from the terminal**: You can also run `copilot app` directly from your terminal (before starting a session) to open the GitHub Copilot app for the current directory. This is handy for quickly jumping to GitHub from the command line without opening a full interactive session.
 
 ### Quick Shell Commands
 
